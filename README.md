@@ -55,7 +55,7 @@ City1, City2
    ```
    **Example:**
    ```bash
-   python astar.py Dalhart "San Antonio"
+   python astar.py Dalhart San_Antonio
    ```
 
 ## Output
@@ -74,15 +74,15 @@ Path not found!
 ```csv
 Dalhart, 36.0609, -102.5202
 Amarillo, 35.2218, -101.8313
-San Antonio, 29.4241, -98.4936
+San_Antonio, 29.4241, -98.4936
 ```
 
 ### roads.csv
 ```csv
 Dalhart, Amarillo
 Amarillo, Lubbock
-Lubbock, San Angelo
-San Angelo, San Antonio
+Lubbock, San_Angelo
+San_Angelo, San_Antonio
 ```
 
 ## Requirements
@@ -94,5 +94,3 @@ San Angelo, San Antonio
   - `sys`
 
 ```
-
-This format should enhance readability and organization. Let me know if you'd like to adjust anything further!
