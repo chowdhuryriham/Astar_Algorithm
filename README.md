@@ -1,5 +1,3 @@
-
-```markdown
 # A* Search Algorithm for Shortest Path Between Cities
 
 ## Table of Contents
@@ -92,5 +90,3 @@ San_Angelo, San_Antonio
   - `heapq`
   - `csv`
   - `sys`
-
-```
