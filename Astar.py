@@ -68,7 +68,7 @@ def astar(cities, roads, start, goal):
         lat2, lon2 = cities[city2]
         return haversine(lat1, lon1, lat2, lon2)
     
-    search_queue = [(0, start, [])]
+    search_queue = [(0,0, start, [])]
 
     #converts search_queue to a min-heap, meaning smallest element at front
     heapq.heapify(search_queue)
@@ -77,7 +77,7 @@ def astar(cities, roads, start, goal):
     explored = set()
 
     while search_queue:
-        cost, city, path = heapq.heappop(search_queue)
+        f, cost, city, path = heapq.heappop(search_queue)
 
         if city in explored:
             continue
@@ -92,7 +92,8 @@ def astar(cities, roads, start, goal):
         for neighbor, distance in roads.get(city, []):
             if neighbor not in explored:
                 total_cost = distance + cost
-                heapq.heappush(search_queue,(total_cost+heuristic(neighbor,goal),neighbor,path))
+                f= total_cost+heuristic(neighbor,goal)
+                heapq.heappush(search_queue,(f,total_cost,neighbor,path))
 
     return None, None
 
